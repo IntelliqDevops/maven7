@@ -30,7 +30,7 @@ pipeline
             {
                 script
                 {
-                   cicd.tomcatDeploy("DeclarativePipelinewithSharedLibraries","172.31.15.40","testapp")   
+                   cicd.tomcatDeploy("MultibranchPipeline","172.31.15.40","testapp")   
                 }
             }
         }
@@ -41,7 +41,7 @@ pipeline
                 script
                 {
                     cicd.gitDownload("FunctionalTesting")
-                    cicd.executeSelenium("DeclarativePipelinewithSharedLibraries")
+                    cicd.executeSelenium("MultibranchPipeline")
                 }
             }
         }
@@ -51,7 +51,7 @@ pipeline
             {
                 script
                 {
-                    cicd.tomcatDeploy("DeclarativePipelinewithSharedLibraries","172.31.14.104","prodapp")
+                    cicd.tomcatDeploy("MultibranchPipeline","prodapp")
                 }
             }
         }
